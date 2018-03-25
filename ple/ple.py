@@ -372,6 +372,13 @@ class PLE(object):
 
         """
         return sum(self._oneStepAct(action) for i in range(self.frame_skip))
+    
+    def close(self):
+        """
+        Close the environment and display
+        """
+        pygame.quit()
+        sys.exit()
 
     def _draw_frame(self):
         """
